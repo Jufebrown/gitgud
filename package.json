@@ -4,7 +4,8 @@
   "description": "App to help refine and maximize git skills.",
   "main": "index.js",
   "dependencies": {
-    "angular": "^1.6.6"
+    "angular": "^1.6.6",
+    "bootstrap": "^3.3.7"
   },
   "devDependencies": {},
   "scripts": {
