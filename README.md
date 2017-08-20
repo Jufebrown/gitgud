@@ -6,6 +6,7 @@
 Dependencies-
  * AngularJS
  * Bootstrap
+ * [gitgraph.js](https://github.com/nicoespeon/gitgraph.js)
 
 Coded at the inaugural [Nashville Software School](http://nashvillesoftwareschool.com/) **Alumni/Student Hackathon**.
 
