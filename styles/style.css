@@ -90,7 +90,7 @@ body {
 .correct-answer {
   width: 100%;
   color: green;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .incorrect-answer {
