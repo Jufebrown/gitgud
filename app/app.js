@@ -1,1 +1,1 @@
-const app = angular.module('gitGud')
+var app = angular.module('gitGud', [])
