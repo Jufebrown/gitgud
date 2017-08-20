@@ -16,11 +16,7 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
     })
   }
 
-  challengeFactory.loadChallenge($scope.gameState.challengeNum)
-  .then((challengeObj) => {
-    $scope.challengeObject = challengeObj
-  })
-
+  $scope.getChallenge()
 
   $scope.submitAnswer = () => {
     $scope.gameState.answered = true
