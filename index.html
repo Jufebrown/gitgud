@@ -17,13 +17,25 @@
 
       <div class="git-flow-container">
         <div class="prompt-text">{{challengeObject.prompt}}</div>
-        <div class="origin-container">
-          <h3>Origin:</h3>
-          <img ng-src="{{challengeObject.images.origin.initial.url}}">
+        <div ng-if="!gameState.correct">
+          <div class="origin-container">
+            <h3>Origin:</h3>
+            <img ng-src="{{challengeObject.images.origin.initial.url}}">
+          </div>
+          <div class="local-container">
+            <h3>Local:</h3>
+            <img ng-src="{{challengeObject.images.local.initial.url}}" >
+          </div>
         </div>
-        <div class="local-container">
-          <h3>Local:</h3>
-          <img ng-src="{{challengeObject.images.local.initial.url}}" >
+        <div ng-if="gameState.correct">
+          <div class="origin-container">
+            <h3>Origin:</h3>
+            <img ng-src="{{challengeObject.images.origin.correct.url}}">
+          </div>
+          <div class="local-container">
+            <h3>Local:</h3>
+            <img ng-src="{{challengeObject.images.local.correct.url}}" >
+          </div>
         </div>
       </div>
 
@@ -32,10 +44,8 @@
       </div>
 
       <div class="input-container">
-        <form class="" action="index.html" method="post">
-          <input type="text" name="" value="">
-          <input type="submit" class="btn btn-primary"></input>
-        </form>
+          <input type="text" name="" ng-model="answer">
+          <button class="btn btn-primary" ng-click="submitAnswer()">Submit</button>
       </div>
 
     </div>
