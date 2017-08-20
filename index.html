@@ -10,7 +10,31 @@
     <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
   </head>
 
+
   <body ng-app="gitGud">
+    
+      <div ng-if="gameState.answered && gameState.correct" class="correct-answer">
+        <p>Very good!</p>
+      </div>
+      <div ng-if="gameState.answered && !gameState.correct" class="incorrect-answer">
+        <p>That's incorrect. Try again.</p>
+      </div>
+
+      <div class="input-container">
+
+        <div class="terminal">
+          <p class="terminal-header">terminal</p>
+          <input type="text" class="terminal-input" ng-model="answer" ng-change="gameState.answered = false" autofocus>
+        </div>
+
+        <button class="btn btn-primary" ng-if="!gameState.correct" ng-click="submitAnswer()">Submit</button>
+        <button class="btn btn-success" ng-if="gameState.answered && gameState.correct" ng-click="nextChallenge()">Next</button>
+      </div>
+
+      <!-- Clear Input Button -->
+      <div ng-if="gameState.answered && gameState.correct" class="clear-page">
+        <button class="btn btn-primary" ng-click="clearPage()">Clear</button>
+      </div>
 
     <div class="container">
         <div ng-include="'partials/challenges.html'"></div>

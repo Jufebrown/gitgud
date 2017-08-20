@@ -9,12 +9,14 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
     correct: false
   }
 
+  $scope.getChallenge = () => {
+    challengeFactory.loadChallenge($scope.gameState.challengeNum)
+    .then((challengeObj) => {
+      $scope.challengeObject = challengeObj
+    })
+  }
 
-  challengeFactory.loadChallenge($scope.gameState.challengeNum)
-  .then((challengeObj) => {
-    $scope.challengeObject = challengeObj
-  })
-
+  $scope.getChallenge()
 
   $scope.submitAnswer = () => {
     $scope.gameState.answered = true
@@ -22,8 +24,19 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
       $scope.gameState.correct = true
     }
   }
+  
+  $scope.clearPage = () => {
+    $scope.answer = null
+    $scope.gameState.answered = false
+    $scope.gameState.correct = false
+  }
 
-  // switch images
-  // enable next button
-  //clear input
+  $scope.nextChallenge = () => {
+    $scope.gameState.challengeNum++
+    $scope.answer = null
+    $scope.gameState.answered = false
+    $scope.gameState.correct = false
+    $scope.getChallenge()
+  }
+
 })
