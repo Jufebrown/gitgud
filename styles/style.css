@@ -74,6 +74,7 @@ body {
   border: 3px solid lightgray;
   border-radius: 5px;
   padding-bottom: 2px;
+  margin-bottom: 10px;
 }
 
 .terminal-header {
