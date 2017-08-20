@@ -82,6 +82,7 @@ body {
   background-color: lightgray;
   color: black;
   border: none;
+  text-align: center;
 }
 
 .terminal-input {
