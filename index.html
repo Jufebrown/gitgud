@@ -47,6 +47,11 @@
           <button class="btn btn-primary" ng-click="submitAnswer()">Submit</button>
       </div>
 
+      <!-- Clear Input Button -->
+      <div ng-if="gameState.answered && gameState.correct" class="clear-page">
+        <button class="btn btn-primary" ng-click="clearPage()">Clear</button>
+      </div>
+
     </div>
 
 

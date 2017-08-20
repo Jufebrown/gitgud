@@ -14,7 +14,6 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
     $scope.challengeObject = challengeObj
   })
 
-
   $scope.submitAnswer = () => {
     $scope.gameState.answered = true
     if ($scope.answer === $scope.challengeObject.answer) {
@@ -22,7 +21,14 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
     }
   }
 
+  $scope.clearPage = () => {
+    $scope.answer = null;
+    $scope.gameState = {
+      answered: false,
+      correct: false
+    }
+  }
+
   // switch images
   // enable next button
-  //clear input
 })
