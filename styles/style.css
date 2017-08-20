@@ -7,3 +7,35 @@
   background-color: red;
   color: white;
 }
+
+.terminal {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20em;
+  width: 80%;
+  background-color: black;
+  color: #00ff00;
+  margin-left: auto;
+  margin-right: auto;
+  border: 3px solid lightgray;
+  border-radius: 5px;
+}
+
+.terminal-header {
+  width: 100%;
+  background-color: lightgray;
+  color: black;
+  border: none;
+}
+
+.terminal-input {
+  width: 100%;
+  background-color: inherit;
+  color: inherit;
+  border: none;
+}
+
+.terminal-input:focus{
+    outline: none;
+}
