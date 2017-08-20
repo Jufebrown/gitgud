@@ -10,7 +10,34 @@
   </head>
   <body ng-app="gitGud">
 
-    <div ng-controller="challengeCtrl"></div>
+    <div ng-controller="challengeCtrl">
+      <div class="main-header">
+        <h1>GitGud</h1>
+      </div>
+
+      <div class="git-flow-container">
+        <div class="origin-container">
+          <h3>Origin:</h3>
+          <img src="{{originImage.src}}" alt="{{originImage.alt}}">
+        </div>
+        <div class="local-container">
+          <h3>Local:</h3>
+          <img src="{{localImage.src}}" alt="{{localImage.alt}}">
+        </div>
+      </div>
+
+      <div class="prompt-container">
+
+      </div>
+
+      <div class="input-container">
+        <form class="" action="index.html" method="post">
+          <input type="text" name="" value="">
+          <input type="submit" class="btn btn-submit">Submit</input>
+        </form>
+      </div>
+
+    </div>
 
 
   <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
