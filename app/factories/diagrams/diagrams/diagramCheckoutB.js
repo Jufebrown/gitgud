@@ -180,10 +180,6 @@ app.factory('diagramCheckoutB', function (diagramStart) {
         message: "added some cool styles",
         dotColor: "orange"
       })
-      .commit({
-        message: "fixed button errors",
-        dotColor: "orange"
-      })
 
     let featureYellow = featureOrange.branch({
       	name: "feature-yellow",
