@@ -114,6 +114,10 @@ p {
     outline: none;
 }
 
+.btn {
+  background-color: lightgrey;
+}
+
 .btn:hover {
-  background-color: lightgray;
+  background-color: #e8e8e8;
 }
