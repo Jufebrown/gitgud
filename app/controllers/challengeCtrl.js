@@ -9,6 +9,12 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
     correct: false
   }
 
+  $scope.getChallenge = () => {
+    challengeFactory.loadChallenge($scope.gameState.challengeNum)
+    .then((challengeObj) => {
+      $scope.challengeObject = challengeObj
+    })
+  }
 
   challengeFactory.loadChallenge($scope.gameState.challengeNum)
   .then((challengeObj) => {
