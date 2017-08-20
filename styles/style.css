@@ -89,16 +89,18 @@ p {
   width: 100%;
   display: flex;
   align-items: flex-end;
+  overflow-y: hidden;
 }
 
 .correct-answer {
   width: 100%;
   color: green;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .incorrect-answer {
   color: #b22222;
+  margin-bottom: 0;
 }
 
 .terminal-input-box {
