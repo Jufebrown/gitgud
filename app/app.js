@@ -1,1 +1,1 @@
-var app = angular.module('gitGud', ["ngSanitize"])
+var app = angular.module('gitGud', ["ngSanitize", "luegg.directives"])
