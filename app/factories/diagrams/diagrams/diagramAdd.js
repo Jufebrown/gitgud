@@ -110,7 +110,7 @@ const initialOrigin = () => {
       		color: "yellow",
       		dotColor:"yellow"
       	})
-      
+
   }
 
   const correctOrigin = () => {
@@ -225,7 +225,12 @@ const initialOrigin = () => {
       		color: "yellow",
       		dotColor:"yellow"
       	})
-      
+        .commit({
+          message: "changes staged : README.md",
+          color: "gray",
+          dotColor: "gray"
+        })
+
   }
 
 
