@@ -1,6 +1,6 @@
 'use strict'
 
-app.controller('challengeCtrl', function($scope, challengeFactory) {
+app.controller('challengeCtrl', function($scope, challengeFactory, diagramService) {
 
   // object to track game state. initialized to challenge number 0 - it should increment when the correct answer is given so the next challenge can be loaded, the question boolean is to flag if the game is asking the question and no answer has been given yet. The other 2 booleans should be self-explanatory.
   $scope.gameState = {
@@ -13,18 +13,18 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
     challengeFactory.loadChallenge($scope.gameState.challengeNum)
     .then((challengeObj) => {
       $scope.challengeObject = challengeObj
+      $scope.updateDiagram();
     })
   }
-
-  $scope.getChallenge()
 
   $scope.submitAnswer = () => {
     $scope.gameState.answered = true
     if ($scope.answer === $scope.challengeObject.answer) {
       $scope.gameState.correct = true
+      $scope.updateDiagram();
     }
   }
-  
+
   $scope.clearPage = () => {
     $scope.answer = null
     $scope.gameState.answered = false
@@ -38,5 +38,16 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
     $scope.gameState.correct = false
     $scope.getChallenge()
   }
+
+  $scope.updateDiagram = () => {
+    let diagram = diagramService[$scope.challengeObject.name];
+    if ($scope.gameState.correct) {
+      diagram.correct()
+    } else {
+      diagram.initial()
+    }
+  }
+
+  $scope.getChallenge()
 
 })

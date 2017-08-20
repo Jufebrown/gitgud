@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/gitgraph.js/build/gitgraph.css">
+
     <link rel="stylesheet" href="/styles/style.css">
     <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
   </head>
 
 
   <body ng-app="gitGud">
-    
+
       <div ng-if="gameState.answered && gameState.correct" class="correct-answer">
         <p>Very good!</p>
       </div>
@@ -40,10 +42,22 @@
         <div ng-include="'partials/challenges.html'"></div>
     </div>
 
-
+    <script type="text/javascript" src="node_modules/gitgraph.js/build/gitgraph.js"></script>
     <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/factories/challengeFactory.js"></script>
     <script type="text/javascript" src="app/controllers/challengeCtrl.js"></script>
+
+    <script type="text/javascript" src="app/factories/diagrams/diagramService.js"></script>
+    <script type="text/javascript" src="app/factories/diagrams/diagrams/diagramStart.js"></script>
+    <script type="text/javascript" src="app/factories/diagrams/diagrams/diagramAdd.js"></script>
+    <script type="text/javascript" src="app/factories/diagrams/diagrams/diagramCheckout.js"></script>
+    <script type="text/javascript" src="app/factories/diagrams/diagrams/diagramCheckoutB.js"></script>
+    <script type="text/javascript" src="app/factories/diagrams/diagrams/diagramClone.js"></script>
+    <script type="text/javascript" src="app/factories/diagrams/diagrams/diagramCommit.js"></script>
+    <script type="text/javascript" src="app/factories/diagrams/diagrams/diagramStatus.js"></script>
+    <script type="text/javascript" src="app/factories/diagrams/diagrams/diagramMerge.js"></script>
+    <script type="text/javascript" src="app/factories/diagrams/diagrams/diagramPull.js"></script>
+    <script type="text/javascript" src="app/factories/diagrams/diagrams/diagramPush.js"></script>
   </body>
 </html>
