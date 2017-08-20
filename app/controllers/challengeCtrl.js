@@ -16,7 +16,6 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
 
 
   $scope.submitAnswer = () => {
-    console.log('submit is running');
     $scope.gameState.answered = true
     if ($scope.answer === $scope.challengeObject.answer) {
       $scope.gameState.correct = true
