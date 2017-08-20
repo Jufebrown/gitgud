@@ -7,8 +7,8 @@ app.factory('challengeFactory', function($http) {
       $http.get('app/assets/challenges/challenges.json')
        .then(function(res){
           return res.data[challengeNum]
+        })
       })
-    })
-  }
-
+    }
+  
 })
