@@ -25,4 +25,11 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
     }
   }
 
+  $scope.nextChallenge = () => {
+    $scope.gameState.challengeNum++
+    $scope.answered = false
+    $scope.correct = false
+    $scope.getChallenge()
+  }
+
 })
