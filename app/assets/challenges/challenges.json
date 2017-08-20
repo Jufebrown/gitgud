@@ -54,6 +54,33 @@
     "answer": "git checkout feature-orange"
   },
   {
+    "name": "git checkout -b",
+    "images": {
+      "origin": {
+        "initial": {
+          "url": "app/assets/pics/x_origin_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_origin_correct.jpg",
+          "alt": ""
+        }
+      },
+      "local": {
+        "initial": {
+          "url": "app/assets/pics/x_local_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_local_correct.jpg",
+          "alt": ""
+        }
+      }
+    },
+    "prompt": "Now you'd like to create a new branch to experiment with a new feature.  Create and name a new branch called feature-yellow.",
+    "answer": "git checkout -b feature-yellow"
+  },
+  {
     "name": "git add",
     "images": {
       "origin": {
