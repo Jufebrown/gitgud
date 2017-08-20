@@ -7,7 +7,17 @@
 
       <div class="git-flow-container">
         <div class="prompt-text">{{challengeObject.prompt}}</div>
-        <div ng-if="!gameState.correct">
+        <div>
+          <div class="origin-container">
+            <h3>Origin:</h3>
+            <canvas id="origin-canvas"></canvas>
+          </div>
+          <div class="local-container">
+            <h3>Local:</h3>
+            <canvas id="local-canvas"></canvas>
+          </div>
+        </div>
+        <!-- <div ng-if="!gameState.correct">
           <div class="origin-container">
             <h3>Origin:</h3>
             <img ng-src="{{challengeObject.images.origin.initial.url}}">
@@ -16,8 +26,8 @@
             <h3>Local:</h3>
             <img ng-src="{{challengeObject.images.local.initial.url}}" >
           </div>
-        </div>
-        <div ng-if="gameState.correct">
+        </div> -->
+        <!-- <div ng-if="gameState.correct">
           <div class="origin-container">
             <h3>Origin:</h3>
             <img ng-src="{{challengeObject.images.origin.correct.url}}">
@@ -26,7 +36,7 @@
             <h3>Local:</h3>
             <img ng-src="{{challengeObject.images.local.correct.url}}" >
           </div>
-        </div>
+        </div> -->
       </div>
 
       <div ng-if="gameState.answered && gameState.correct" class="correct-answer">
