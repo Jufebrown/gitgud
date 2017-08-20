@@ -63,12 +63,12 @@
           </div>
 
           <button class="btn" ng-if="!gameState.correct" ng-click="submitAnswer()" type="submit">Submit</button>
-          <button class="btn" ng-if="gameState.answered && gameState.correct" ng-click="nextChallenge()">Next</button>
+          <button class="btn" ng-if="gameState.answered && gameState.correct && !lastChallenge" ng-click="nextChallenge()">Next</button>
         </form>
       </div>
 
     </div>
-  
+
     <div class="col-xs-12 col-sm-4 col-md-4" ng-include="'partials/sidebar.html'"></div>
 
   </div>

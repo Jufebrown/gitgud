@@ -45,7 +45,11 @@ app.controller('challengeCtrl', function($scope, challengeFactory, diagramServic
   }
 
   $scope.nextChallenge = () => {
+    $scope.lastChallenge = false
     $scope.gameState.challengeNum++
+    if ($scope.gameState.challengeNum === ($scope.allChallenges.length - 1)) {
+      $scope.lastChallenge = true
+    }
     $scope.answer = null
     $scope.gameState.answered = false
     $scope.gameState.correct = false
