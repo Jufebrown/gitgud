@@ -39,9 +39,27 @@
         </div> -->
       </div>
 
+      <div ng-if="gameState.answered && gameState.correct" class="correct-answer">
+        <p>Very good!</p>
+      </div>
+      <div ng-if="gameState.answered && !gameState.correct" class="incorrect-answer">
+        <p>That's incorrect. Try again.</p>
+      </div>
+
       <div class="input-container">
-          <input type="text" name="" ng-model="answer">
-          <button class="btn btn-primary" ng-click="submitAnswer()">Submit</button>
+
+        <div class="terminal">
+          <p class="terminal-header">terminal</p>
+          <input type="text" class="terminal-input" ng-model="answer" ng-change="gameState.answered = false" autofocus>
+        </div>
+
+        <!-- Clear Input Button -->
+        <div ng-if="gameState.answered && gameState.correct" class="clear-page">
+          <button class="btn btn-primary" ng-click="clearPage()">Clear</button>
+        </div>
+
+        <button class="btn btn-primary" ng-if="!gameState.correct" ng-click="submitAnswer()">Submit</button>
+        <button class="btn btn-success" ng-if="gameState.answered && gameState.correct" ng-click="nextChallenge()">Next</button>
       </div>
 
     </div>

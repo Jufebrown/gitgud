@@ -21,7 +21,7 @@ app.controller('challengeCtrl', function($scope, challengeFactory, diagramServic
     $scope.gameState.answered = true
     if ($scope.answer === $scope.challengeObject.answer) {
       $scope.gameState.correct = true
-      $scope.updateDiagram();
+      $scope.updateDiagram()
     }
   }
 
@@ -29,6 +29,7 @@ app.controller('challengeCtrl', function($scope, challengeFactory, diagramServic
     $scope.answer = null
     $scope.gameState.answered = false
     $scope.gameState.correct = false
+    $scope.updateDiagram()
   }
 
   $scope.nextChallenge = () => {
