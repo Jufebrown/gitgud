@@ -1,4 +1,5 @@
 app.factory('diagramAdd', function (diagramStart) {
+
 const initialOrigin = () => {
     var graph = diagramStart('origin-canvas')
     graph.render();
@@ -226,6 +227,10 @@ const initialOrigin = () => {
       	})
       
   }
+
+
+
+
 
   return {
     initial : () => {

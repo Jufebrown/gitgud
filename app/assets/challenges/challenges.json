@@ -191,7 +191,7 @@
         }
       }
     },
-    "prompt": "It's time to record the changes to your files.  Enter the command to store the contents of the index with the log message 'added README file'.",
+    "prompt": "It's time to record the changes to your files.  Enter the command to store the staged contents of the index (shown below in gray) with the log message 'added README file'.",
     "answer": "git commit -m 'added README file'",
     "terminal_response": "<p>[feature-yellow 08365fe] added README file<\/p><p>1 file changed, 0 insertions(+), 0 deletions(-)<\/p><p>create mode 100644 README.md<\/p>"
   },

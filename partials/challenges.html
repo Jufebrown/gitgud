@@ -39,18 +39,19 @@
         </div> -->
       </div>
 
-      <!-- <div ng-if="gameState.answered && gameState.correct" class="correct-answer">
-        <p>Very good!</p>
-      </div> -->
 
       <div class="input-container">
         <form>
           <div class="terminal">
             <p class="terminal-header">terminal</p>
-            <div ng-if="gameState.answered && !gameState.correct" class="incorrect-answer">
-              <p>incorrect input</p>
+            <div class="terminal-message-container">
+              <div ng-if="gameState.answered && !gameState.correct" class="incorrect-answer terminal-left-pad">
+                <p>incorrect input</p>
+              </div>
+              <div ng-if="gameState.answered && gameState.correct" class="correct-answer terminal-left-pad" ng-bind-html="challengeObject.terminal_response" scroll-glue>
+              </div>
             </div>
-            <div class="terminal-input">
+            <div class="terminal-input terminal-left-pad">
               <span>gitgud$</span>
               <input type="text" ng-model="answer" ng-change="gameState.answered = false" class="terminal-input-box" autofocus>
             </div>
