@@ -59,11 +59,11 @@
 
           <!-- Clear Input Button -->
           <div ng-if="gameState.answered && gameState.correct" class="clear-page">
-            <button class="btn" ng-click="clearPage()">Clear</button>
+            <div class="btn" ng-click="clearPage()">Clear</div>
+            <div class="btn" ng-if="gameState.answered && gameState.correct" ng-click="nextChallenge()">Next</div>
           </div>
 
-          <button class="btn" ng-if="!gameState.correct" ng-click="submitAnswer()" type="submit">Submit</button>
-          <button class="btn" ng-if="gameState.answered && gameState.correct" ng-click="nextChallenge()">Next</button>
+          <div class="btn" ng-if="!gameState.correct" ng-click="submitAnswer()" type="submit">Submit</div>
         </form>
       </div>
 
