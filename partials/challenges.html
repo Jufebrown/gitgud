@@ -39,27 +39,31 @@
         </div> -->
       </div>
 
-      <div ng-if="gameState.answered && gameState.correct" class="correct-answer">
+      <!-- <div ng-if="gameState.answered && gameState.correct" class="correct-answer">
         <p>Very good!</p>
-      </div>
-      <div ng-if="gameState.answered && !gameState.correct" class="incorrect-answer">
-        <p>That's incorrect. Try again.</p>
-      </div>
+      </div> -->
 
       <div class="input-container">
+        <form>
+          <div class="terminal">
+            <p class="terminal-header">terminal</p>
+            <div ng-if="gameState.answered && !gameState.correct" class="incorrect-answer">
+              <p>incorrect input</p>
+            </div>
+            <div class="terminal-input">
+              <span>gitgud$</span>
+              <input type="text" ng-model="answer" ng-change="gameState.answered = false" class="terminal-input-box" autofocus>
+            </div>
+          </div>
 
-        <div class="terminal">
-          <p class="terminal-header">terminal</p>
-          <input type="text" class="terminal-input" ng-model="answer" ng-change="gameState.answered = false" autofocus>
-        </div>
+          <!-- Clear Input Button -->
+          <div ng-if="gameState.answered && gameState.correct" class="clear-page">
+            <button class="btn btn-primary" ng-click="clearPage()">Clear</button>
+          </div>
 
-        <!-- Clear Input Button -->
-        <div ng-if="gameState.answered && gameState.correct" class="clear-page">
-          <button class="btn btn-primary" ng-click="clearPage()">Clear</button>
-        </div>
-
-        <button class="btn btn-primary" ng-if="!gameState.correct" ng-click="submitAnswer()">Submit</button>
-        <button class="btn btn-success" ng-if="gameState.answered && gameState.correct" ng-click="nextChallenge()">Next</button>
+          <button class="btn btn-primary" ng-if="!gameState.correct" ng-click="submitAnswer()" type="submit">Submit</button>
+          <button class="btn btn-success" ng-if="gameState.answered && gameState.correct" ng-click="nextChallenge()">Next</button>
+        </form>
       </div>
 
     </div>
