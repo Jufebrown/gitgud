@@ -52,6 +52,11 @@
           <button class="btn btn-success" ng-if="gameState.answered && gameState.correct" ng-click="nextChallenge()">Next</button>
       </div>
 
+      <!-- Clear Input Button -->
+      <div ng-if="gameState.answered && gameState.correct" class="clear-page">
+        <button class="btn btn-primary" ng-click="clearPage()">Clear</button>
+      </div>
+
     </div>
 
 

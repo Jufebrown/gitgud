@@ -24,6 +24,12 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
       $scope.gameState.correct = true
     }
   }
+  
+  $scope.clearPage = () => {
+    $scope.answer = null
+    $scope.gameState.answered = false
+    $scope.gameState.correct = false
+  }
 
   $scope.nextChallenge = () => {
     $scope.gameState.challengeNum++
