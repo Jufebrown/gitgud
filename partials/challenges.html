@@ -1,6 +1,6 @@
-<div class="row">
-  <div class="col-xs-12 col-sm-6 col-md-8">
-    <div ng-controller="challengeCtrl">
+<div ng-controller="challengeCtrl">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-md-8">
       <div class="main-header">
         <h1>GitGud</h1>
       </div>
@@ -59,18 +59,18 @@
 
           <!-- Clear Input Button -->
           <div ng-if="gameState.answered && gameState.correct" class="clear-page">
-            <button class="btn btn-primary" ng-click="clearPage()">Clear</button>
+            <button class="btn" ng-click="clearPage()">Clear</button>
           </div>
 
-          <button class="btn btn-primary" ng-if="!gameState.correct" ng-click="submitAnswer()" type="submit">Submit</button>
-          <button class="btn btn-success" ng-if="gameState.answered && gameState.correct" ng-click="nextChallenge()">Next</button>
+          <button class="btn" ng-if="!gameState.correct" ng-click="submitAnswer()" type="submit">Submit</button>
+          <button class="btn" ng-if="gameState.answered && gameState.correct" ng-click="nextChallenge()">Next</button>
         </form>
       </div>
 
     </div>
+  
+    <div class="col-xs-12 col-sm-4 col-md-4" ng-include="'partials/sidebar.html'"></div>
 
   </div>
-
-  <div class="col-xs-12 col-sm-4 col-md-4" ng-include="'partials/sidebar.html'"></div>
 
 </div>
