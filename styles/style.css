@@ -80,7 +80,15 @@ body {
   text-align: center;
 }
 
+.terminal-message-container {
+  min-height: 10em;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
 .correct-answer {
+  width: 100%;
   color: green;
   overflow-y: scroll;
 }

@@ -44,10 +44,12 @@
         <form>
           <div class="terminal">
             <p class="terminal-header">terminal</p>
-            <div ng-if="gameState.answered && !gameState.correct" class="incorrect-answer terminal-left-pad">
-              <p>incorrect input</p>
-            </div>
-            <div ng-if="gameState.answered && gameState.correct" class="correct-answer terminal-left-pad" ng-bind-html="challengeObject.terminal_response" scroll-glue>
+            <div class="terminal-message-container">
+              <div ng-if="gameState.answered && !gameState.correct" class="incorrect-answer terminal-left-pad">
+                <p>incorrect input</p>
+              </div>
+              <div ng-if="gameState.answered && gameState.correct" class="correct-answer terminal-left-pad" ng-bind-html="challengeObject.terminal_response" scroll-glue>
+              </div>
             </div>
             <div class="terminal-input terminal-left-pad">
               <span>gitgud$</span>
