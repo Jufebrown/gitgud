@@ -1,6 +1,6 @@
 'use strict'
 
-app.factory('authFactory', function($http) {
+app.factory('challengeFactory', function($http) {
   return {
 
     loadChallenge: function(challengeNum) {
