@@ -1,5 +1,55 @@
+body {
+	background-color: #f9f9f9;
+	font-family: 'Space Mono', monospace;
+	color: #333333;
+}
+
 .sidebar {
-	background-color: lightgrey;
 	min-height: 450px;
 	margin-top: 25px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+.sidebar-title {
+	text-align: center;
+	padding-top: 25px;
+}
+
+.complete {
+	width: 5px;
+	height: 50px;
+	position: relative;
+	background: grey;
+	margin-left: 8px;
+}
+.complete:after {
+  	content: '';
+  	width: 20px;
+  	height: 20px;
+  	border-radius: 50%;
+  	position: absolute;
+  	bottom: -7.5px;
+  	left: -8px;
+  	background: grey;
+  	z-index: 100;
+}
+.not-complete {
+  	width: 5px;
+  	height: 50px;
+  	background: lightgrey;
+  	position: relative;
+  	margin-left: 8px;
+}
+.not-complete:after {
+  	content: '';
+  	width: 20px;
+  	height: 20px;
+  	border-radius: 50%;
+  	position: absolute;
+  	bottom: -7.5px;
+  	left: -8px;
+  	background: lightgray;
+  	z-index: 100;
 }
