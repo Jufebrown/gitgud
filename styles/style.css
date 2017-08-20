@@ -53,15 +53,6 @@ body {
   	background: lightgray;
   	z-index: 100;
 }
-.correct-answer {
-  background-color: green;
-  color: white;
-}
-
-.incorrect-answer {
-  color: #b22222;
-  padding-left: 5px;
-}
 
 .terminal {
   display: flex;
@@ -77,6 +68,10 @@ body {
   margin-bottom: 10px;
 }
 
+.terminal-left-pad {
+  padding-left: 5px;
+}
+
 .terminal-header {
   width: 100%;
   background-color: lightgray;
@@ -85,12 +80,17 @@ body {
   text-align: center;
 }
 
-.terminal-input {
-  padding-left: 5px;
+.correct-answer {
+  color: green;
+  overflow-y: scroll;
+}
+
+.incorrect-answer {
+  color: #b22222;
 }
 
 .terminal-input-box {
-  width: auto;
+  width: 75%;
   background-color: inherit;
   color: inherit;
   border: none;
