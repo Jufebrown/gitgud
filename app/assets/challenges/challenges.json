@@ -4,21 +4,21 @@
     "images": {
       "origin": {
         "initial": {
-          "url": "app/assets/pics/clone.jpg",
+          "url": "app/assets/pics/clone/origin/initial.jpg",
           "alt": ""
         },
         "correct": {
-          "url": "",
+          "url": "app/assets/pics/clone/origin/correct.jpg",
           "alt": ""
         }
       },
       "local": {
         "initial": {
-          "url": "app/assets/pics/clone.jpg",
+          "url": null,
           "alt": ""
         },
         "correct": {
-          "url": "app/assets/pics/clone.jpg",
+          "url": "app/assets/pics/clone/local/correct.jpg",
           "alt": ""
         }
       }
