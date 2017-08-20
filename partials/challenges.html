@@ -47,7 +47,7 @@
             <div ng-if="gameState.answered && !gameState.correct" class="incorrect-answer terminal-left-pad">
               <p>incorrect input</p>
             </div>
-            <div ng-if="gameState.answered && gameState.correct" class="correct-answer terminal-left-pad" ng-bind-html="challengeObject.terminal_response">
+            <div ng-if="gameState.answered && gameState.correct" class="correct-answer terminal-left-pad" ng-bind-html="challengeObject.terminal_response" scroll-glue-bottom="glued">
             </div>
             <div class="terminal-input terminal-left-pad">
               <span>gitgud$</span>
