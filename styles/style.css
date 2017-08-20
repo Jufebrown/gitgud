@@ -99,3 +99,7 @@ body {
 .terminal-input input:focus{
     outline: none;
 }
+
+.btn:hover {
+  background-color: lightgray;
+}

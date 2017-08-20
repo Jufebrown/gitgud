@@ -9,10 +9,22 @@ app.controller('challengeCtrl', function($scope, challengeFactory, diagramServic
     correct: false
   }
 
+  $scope.allChallenges = [];
+
+  $scope.getAllChallenges = () => {
+    challengeFactory.loadChallenge()
+    .then((allOfTheChallenges) => {
+      $scope.allChallenges = allOfTheChallenges
+      console.log($scope.allChallenges);
+    });
+  };
+
+  $scope.getAllChallenges();
+
   $scope.getChallenge = () => {
-    challengeFactory.loadChallenge($scope.gameState.challengeNum)
-    .then((challengeObj) => {
-      $scope.challengeObject = challengeObj
+    challengeFactory.loadChallenge()
+    .then((allChallengeObj) => {
+      $scope.challengeObject = allChallengeObj[$scope.gameState.challengeNum]
       $scope.updateDiagram();
     })
   }

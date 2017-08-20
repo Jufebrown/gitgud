@@ -2,10 +2,10 @@
 
 app.factory('challengeFactory', function($http) {
   return {
-    loadChallenge: function(challengeNum) {
+    loadChallenge: function() {
       return $http.get('app/assets/challenges/challenges.json')
       .then(function(res){
-          return res.data[challengeNum]
+          return res.data
       })
     }
   }
