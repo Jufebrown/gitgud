@@ -24,7 +24,8 @@
       }
     },
     "prompt": "You have a code repository stored at https://github.com/git_user/gud_repo.git and you want to copy it to your local machine. What command should you run?",
-    "answer": "git clone https://github.com/git_user/gud_repo.git"
+    "answer": "git clone https://github.com/git_user/gud_repo.git",
+    "terminal_response": "<p>Cloning into 'gud_repo'...<\/p><p>remote: Counting objects: 6, done.<\/p><p>remote: Compressing objects: 100% (3\/3), done.<\/p><p>remote: Total 6 (delta 0), reused 6 (delta 0), pack-reused 0<\/p><p>Unpacking objects: 100% (6/6), done.<\/p>"
   },
   {
     "name": "git checkout",
@@ -51,7 +52,8 @@
       }
     },
     "prompt": "You're currently working off your master branch(blue). Please enter the command to switch over to an existing branch called feature-orange.",
-    "answer": "git checkout feature-orange"
+    "answer": "git checkout feature-orange",
+    "terminal_response": "<p>Switched to branch 'feature-orange'<\/p>"
   },
   {
     "name": "git checkout -b",
@@ -78,7 +80,8 @@
       }
     },
     "prompt": "Now you'd like to create a new branch to experiment with a new feature.  Create and name a new branch called feature-yellow.",
-    "answer": "git checkout -b feature-yellow"
+    "answer": "git checkout -b feature-yellow",
+    "terminal_response": "<p>Switched to a new branch 'feature-yellow'<\/p>"
   },
   {
     "name": "git status-1",
@@ -105,7 +108,8 @@
       }
     },
     "prompt": "You need to check which files Git is currently tracking.  Enter the command that will show you the state of the working tree.",
-    "answer": "git status"
+    "answer": "git status",
+    "terminal_response": "<p>On branch feature-yellow<\/p><p>Changes not staged for commit:<\/p><p>(use 'git add <file>...' to update what will be committed)<\/p><p>(use 'git checkout -- <file>...' to discard changes in working directory)<\/p><p style='color:red;'>modified:   index.html<\/p>"
   },
   {
     "name": "git add",
@@ -132,7 +136,8 @@
       }
     },
     "prompt": "You've created a file called README.md to document your project.  Please enter the command to stage README.md to be tracked by Git.",
-    "answer": "git add README.md"
+    "answer": "git add README.md",
+    "terminal_response" : ""
   },
   {
     "name": "git status-2",
@@ -159,7 +164,8 @@
       }
     },
     "prompt": "Enter the command that will show you which files are staged to be recorded to the repository.",
-    "answer": "git status"
+    "answer": "git status",
+    "terminal_response": "<p>On branch feature-yellow<\/p><p>Changes to be committed:<\/p><p>(use 'it reset HEAD <file>...' to unstage)<\/p><p style='color:green;'>new file:   README.md<\/p>"
   },
   {
     "name": "git commit",
@@ -186,7 +192,8 @@
       }
     },
     "prompt": "It's time to record the changes to your files.  Enter the command to store the contents of the index with the log message 'added README file'.",
-    "answer": "git commit -m 'added README file'"
+    "answer": "git commit -m 'added README file'",
+    "terminal_response": "<p>[feature-yellow 08365fe] added README file<\/p><p>1 file changed, 0 insertions(+), 0 deletions(-)<\/p><p>create mode 100644 README.md<\/p>"
   },
   {
     "name": "git push",
@@ -213,7 +220,8 @@
       }
     },
     "prompt": "You're happy with your work on branch feature-yellow and have commited the changes. Please enter the command to send your branch to the remote repository.",
-    "answer": "git push origin feature-yellow"
+    "answer": "git push origin feature-yellow",
+    "terminal_response": "<p>Counting objects: 9, done.<\/p><p>Delta compression using up to 4 threads.</p><p>Compressing objects: 100% (7/7), done.<\/p><p>Writing objects: 100% (9/9), 815 bytes | 0 bytes/s, done.</p><p>Total 9 (delta 1), reused 0 (delta 0)<\/p><p>remote: Resolving deltas: 100% (1/1), done.<\/p><p>To https://github.com/daniel-certa-1228/gud_repo<\/p><p>* [new branch]      feature-yellow -> feature-yellow<\/p>"
   },
   {
     "name": "git pull",
@@ -240,7 +248,8 @@
       }
     },
     "prompt": "The team lead has merged feature-yellow with the remote master branch.  Enter the command to fetch and integrate the new remote master with your local master(blue).",
-    "answer": "git pull origin master"
+    "answer": "git pull origin master",
+    "terminal_response": "<p>remote: Counting objects: 1, done.<\/p><p>remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0<\/p><p>Unpacking objects: 100% (1/1), done.<\/p><p>From https://github.com/daniel-certa-1228/gud_repo<\/p><p>* branch            master     -> FETCH_HEAD<\/p><p>   63799a2..ddf5397  master     -> origin/master<\/p><p>Updating 63799a2..ddf5397<\/p><p>Fast-forward<\/p><p>README.md  | 0<\/p><p> index.html | 4 <span style='color:green;'>++<\/span><span style='color:green;'>--<\/span><\/p><p> 2 files changed, 2 insertions(+), 2 deletions(-)<\/p><p> create mode 100644 README.md<\/p>"
   },
   {
     "name": "git merge",
@@ -267,6 +276,7 @@
       }
     },
     "prompt": "You're now working on branch feature-orange. Enter the command to integrate the new local master(blue) into your branch.",
-    "answer": "git merge master"
+    "answer": "git merge master",
+    "terminal_response": "<p>Updating 63799a2..ddf5397<\/p><p>Fast-forward<\/p><p> README.md  | 0<\/p><p> index.html | 4 <span style='color:green;'>++<\/span><span style='color:green;'>--<\/span></p><p> 2 files changed, 2 insertions(+), 2 deletions(-)<\/p><p>create mode 100644 README.md<\/p>"
   }
 ]
