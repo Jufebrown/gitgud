@@ -9,10 +9,6 @@ app.controller('challengeCtrl', function($scope, challengeFactory, diagramServic
     correct: false
   }
 
-  $scope.completedChallenge = () => {
-    $scope.classComplete = 'complete';
-  }
-
   $scope.allChallenges = [];
 
   $scope.getAllChallenges = () => {
@@ -46,7 +42,6 @@ app.controller('challengeCtrl', function($scope, challengeFactory, diagramServic
     $scope.gameState.answered = false
     $scope.gameState.correct = false
     $scope.updateDiagram()
-    $scope.completedChallenge()
   }
 
   $scope.nextChallenge = () => {
