@@ -1,6 +1,20 @@
 app.factory('diagramMerge', function (diagramStart) {
+  const initialOrigin = () => {}
+
+  const initialLocal = () => {}
+
+  const correctOrigin = () => {}
+
+  const correctLocal = () => {}
+  
   return {
-    initial : () => {},
-    correct : () => {}
+    initial : () => {
+      initialOrigin();
+      initialLocal();
+    },
+    correct : () => {
+      correctOrigin();
+      correctLocal();
+    }
   }
 });
