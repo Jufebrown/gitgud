@@ -11,15 +11,12 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
 
   challengeFactory.loadChallenge($scope.gameState.challengeNum)
   .then((challengeObj) => {
-    console.log('challengeObj', challengeObj)
     $scope.challengeObject = challengeObj
-    console.log('challengeObject in then', $scope.challengeObject)
   })
-  
-  console.log('hello')
 
-  $scope.submit = () => {
-    console.log('submit is running')
+
+  $scope.submitAnswer = () => {
+    console.log('submit is running');
     $scope.gameState.answered = true
     if ($scope.answer === $scope.challengeObject.answer) {
       $scope.gameState.correct = true
