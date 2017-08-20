@@ -81,6 +81,33 @@
     "answer": "git checkout -b feature-yellow"
   },
   {
+    "name": "git status-1",
+    "images": {
+      "origin": {
+        "initial": {
+          "url": "app/assets/pics/x_origin_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_origin_correct.jpg",
+          "alt": ""
+        }
+      },
+      "local": {
+        "initial": {
+          "url": "app/assets/pics/x_local_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_local_correct.jpg",
+          "alt": ""
+        }
+      }
+    },
+    "prompt": "You need to check which files Git is currently tracking.  Enter the command that will show you the state of the working tree.",
+    "answer": "git status"
+  },
+  {
     "name": "git add",
     "images": {
       "origin": {
@@ -108,6 +135,33 @@
     "answer": "git add README.md"
   },
   {
+    "name": "git status-2",
+    "images": {
+      "origin": {
+        "initial": {
+          "url": "app/assets/pics/x_origin_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_origin_correct.jpg",
+          "alt": ""
+        }
+      },
+      "local": {
+        "initial": {
+          "url": "app/assets/pics/x_local_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_local_correct.jpg",
+          "alt": ""
+        }
+      }
+    },
+    "prompt": "Enter the command that will show you which files are staged to be recorded to the repository.",
+    "answer": "git status"
+  },
+  {
     "name": "git commit",
     "images": {
       "origin": {
@@ -131,7 +185,88 @@
         }
       }
     },
-    "prompt": "It's time to record the changes to your files.  Enter the cammand to store the contents of the index with the log message 'added README file'.",
+    "prompt": "It's time to record the changes to your files.  Enter the command to store the contents of the index with the log message 'added README file'.",
     "answer": "git commit -m 'added README file'"
+  },
+  {
+    "name": "git push",
+    "images": {
+      "origin": {
+        "initial": {
+          "url": "app/assets/pics/x_origin_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_origin_correct.jpg",
+          "alt": ""
+        }
+      },
+      "local": {
+        "initial": {
+          "url": "app/assets/pics/x_local_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_local_correct.jpg",
+          "alt": ""
+        }
+      }
+    },
+    "prompt": "You're happy with your work on branch feature-yellow and have commited the changes. Please enter the command to send your branch to the remote repository.",
+    "answer": "git push origin feature-yellow"
+  },
+  {
+    "name": "git pull",
+    "images": {
+      "origin": {
+        "initial": {
+          "url": "app/assets/pics/x_origin_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_origin_correct.jpg",
+          "alt": ""
+        }
+      },
+      "local": {
+        "initial": {
+          "url": "app/assets/pics/x_local_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_local_correct.jpg",
+          "alt": ""
+        }
+      }
+    },
+    "prompt": "The team lead has merged feature-yellow with the remote master branch.  Enter the command to fetch and integrate the new remote master with your local master(blue).",
+    "answer": "git pull origin master"
+  },
+  {
+    "name": "git merge",
+    "images": {
+      "origin": {
+        "initial": {
+          "url": "app/assets/pics/x_origin_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_origin_correct.jpg",
+          "alt": ""
+        }
+      },
+      "local": {
+        "initial": {
+          "url": "app/assets/pics/x_local_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_local_correct.jpg",
+          "alt": ""
+        }
+      }
+    },
+    "prompt": "You're now working on branch feature-orange. Enter the command to integrate the new local master(blue) into your branch.",
+    "answer": "git merge master"
   }
 ]
