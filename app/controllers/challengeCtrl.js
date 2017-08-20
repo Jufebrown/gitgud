@@ -9,6 +9,7 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
     correct: false
   }
 
+
   challengeFactory.loadChallenge($scope.gameState.challengeNum)
   .then((challengeObj) => {
     $scope.challengeObject = challengeObj
@@ -20,13 +21,11 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
       $scope.gameState.correct = true
     }
   }
-
+  
   $scope.clearPage = () => {
-    $scope.answer = null;
-    $scope.gameState = {
-      answered: false,
-      correct: false
-    }
+    $scope.answer = null
+    $scope.gameState.answered = false
+    $scope.gameState.correct = false
   }
 
   // switch images

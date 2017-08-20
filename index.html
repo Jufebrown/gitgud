@@ -16,6 +16,7 @@
       </div>
 
       <div class="git-flow-container">
+        <div class="prompt-text">{{challengeObject.prompt}}</div>
         <div ng-if="!gameState.correct">
           <div class="origin-container">
             <h3>Origin:</h3>
@@ -42,8 +43,15 @@
 
       </div>
 
+      <div ng-if="gameState.answered && gameState.correct" class="correct-answer">
+        <p>Very good!</p>
+      </div>
+      <div ng-if="gameState.answered && !gameState.correct" class="incorrect-answer">
+        <p>That's incorrect. Try again.</p>
+      </div>
+
       <div class="input-container">
-          <input type="text" name="" ng-model="answer">
+          <input type="text" name="" ng-model="answer" ng-change="gameState.answered = false">
           <button class="btn btn-primary" ng-click="submitAnswer()">Submit</button>
       </div>
 
