@@ -23,7 +23,4 @@ app.controller('challengeCtrl', function($scope, challengeFactory) {
     }
   }
 
-  // switch images
-  // enable next button
-  //clear input
 })
