@@ -16,13 +16,25 @@
       </div>
 
       <div class="git-flow-container">
-        <div class="origin-container">
-          <h3>Origin:</h3>
-          <img ng-src="{{challengeObject.images.origin.initial.url}}">
+        <div ng-if="gameState.correct === false">
+          <div class="origin-container">
+            <h3>Origin:</h3>
+            <img ng-src="{{challengeObject.images.origin.initial.url}}">
+          </div>
+          <div class="local-container">
+            <h3>Local:</h3>
+            <img ng-src="{{challengeObject.images.local.initial.url}}" >
+          </div>
         </div>
-        <div class="local-container">
-          <h3>Local:</h3>
-          <img ng-src="{{challengeObject.images.local.initial.url}}" >
+        <div ng-if="gameState.correct === true">
+          <div class="origin-container">
+            <h3>Origin:</h3>
+            <img ng-src="{{challengeObject.images.origin.correct.url}}">
+          </div>
+          <div class="local-container">
+            <h3>Local:</h3>
+            <img ng-src="{{challengeObject.images.local.correct.url}}" >
+          </div>
         </div>
       </div>
 
