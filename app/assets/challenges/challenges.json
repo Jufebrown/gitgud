@@ -27,7 +27,7 @@
     "answer": "git clone https://github.com/git_user/gud_repo.git"
   },
   {
-    "name": "git x",
+    "name": "git checkout",
     "images": {
       "origin": {
         "initial": {
@@ -50,7 +50,61 @@
         }
       }
     },
-    "prompt": "Prompt for 2nd challenge",
-    "answer": "git clone https://github.com/git_user/gud_repo.git"
+    "prompt": "You're currently working off your master branch(blue). Please enter the command to switch over to an existing branch called feature-orange.",
+    "answer": "git checkout feature-orange"
+  },
+  {
+    "name": "git add",
+    "images": {
+      "origin": {
+        "initial": {
+          "url": "app/assets/pics/x_origin_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_origin_correct.jpg",
+          "alt": ""
+        }
+      },
+      "local": {
+        "initial": {
+          "url": "app/assets/pics/x_local_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_local_correct.jpg",
+          "alt": ""
+        }
+      }
+    },
+    "prompt": "You've created a file called README.md to document your project.  Please enter the command to stage README.md to be tracked by Git.",
+    "answer": "git add README.md"
+  },
+  {
+    "name": "git commit",
+    "images": {
+      "origin": {
+        "initial": {
+          "url": "app/assets/pics/x_origin_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_origin_correct.jpg",
+          "alt": ""
+        }
+      },
+      "local": {
+        "initial": {
+          "url": "app/assets/pics/x_local_initial.jpg",
+          "alt": ""
+        },
+        "correct": {
+          "url": "app/assets/pics/x_local_correct.jpg",
+          "alt": ""
+        }
+      }
+    },
+    "prompt": "It's time to record the changes to your files.  Enter the cammand to store the contents of the index with the log message 'added README file'.",
+    "answer": "git commit -m 'added README file'"
   }
 ]
