@@ -42,6 +42,13 @@
 
       </div>
 
+      <div ng-if="gameState.answered && gameState.correct" class="correct-answer">
+        <p>Very good!</p>
+      </div>
+      <div ng-if="gameState.answered && !gameState.correct" class="incorrect-answer">
+        <p>That's incorrect. Try again.</p>
+      </div>
+
       <div class="input-container">
           <input type="text" name="" ng-model="answer">
           <button class="btn btn-primary" ng-click="submitAnswer()">Submit</button>
