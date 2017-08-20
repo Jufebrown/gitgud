@@ -7,38 +7,12 @@
     <title>Document</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
   </head>
+
+
   <body ng-app="gitGud">
-
-    <div ng-controller="challengeCtrl">
-      <div class="main-header">
-        <h1>GitGud</h1>
-      </div>
-
-      <div class="git-flow-container">
-        <div class="prompt-text">{{challengeObject.prompt}}</div>
-        <div ng-if="!gameState.correct">
-          <div class="origin-container">
-            <h3>Origin:</h3>
-            <img ng-src="{{challengeObject.images.origin.initial.url}}">
-          </div>
-          <div class="local-container">
-            <h3>Local:</h3>
-            <img ng-src="{{challengeObject.images.local.initial.url}}" >
-          </div>
-        </div>
-        <div ng-if="gameState.correct">
-          <div class="origin-container">
-            <h3>Origin:</h3>
-            <img ng-src="{{challengeObject.images.origin.correct.url}}">
-          </div>
-          <div class="local-container">
-            <h3>Local:</h3>
-            <img ng-src="{{challengeObject.images.local.correct.url}}" >
-          </div>
-        </div>
-      </div>
-
+    
       <div ng-if="gameState.answered && gameState.correct" class="correct-answer">
         <p>Very good!</p>
       </div>
@@ -62,6 +36,8 @@
         <button class="btn btn-primary" ng-click="clearPage()">Clear</button>
       </div>
 
+    <div class="container">
+        <div ng-include="'partials/challenges.html'"></div>
     </div>
 
 
